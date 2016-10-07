@@ -15,6 +15,7 @@
 
 <!-- UI JS file -->
 <script src="dist/photoswipe-ui-default.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>

@@ -65,7 +65,7 @@
 						  $files[$file] = filemtime($dir . '/' . $file);
 					  }
 
-					  arsort($files);
+					  krsort($files);
 					  $files = array_keys($files);
 
 					  return ($files) ? $files : false;

@@ -60,12 +60,12 @@
 					  $ignored = array('.', '..', '.svn', '.htaccess');
 
 					  $files = array();
-					  foreach (scandir($dir) as $file) {
+					  foreach (scandir($dir, 1) as $file) {
 						  if (in_array($file, $ignored)) continue;
 						  $files[$file] = filemtime($dir . '/' . $file);
 					  }
 
-					  krsort($files);
+					  arsort($files);
 					  $files = array_keys($files);
 
 					  return ($files) ? $files : false;

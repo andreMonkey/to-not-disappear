@@ -66,10 +66,11 @@
 					  }
 
 					  arsort($files);
-				      array_reverse($files);
 					  $files = array_keys($files);
+				  array_reverse($files);
 
-					  return ($files) ? $files : false;
+
+				  return ($files) ? $files : false;
 			  }
 
 			  ?>

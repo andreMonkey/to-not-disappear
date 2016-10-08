@@ -35,8 +35,7 @@
 			  <?php
 			  // use echo to write things into html
 			  $dir = 'images';
-			  //$files = scandir($dir, 0);
-			  $files = getFiles($dir);
+			  $files = scandir($dir, 0);
 			  $pictureFolder = 'images/';
 			  $pictureFormat = 'jpg';
 			  $pictureIndex = 1;
@@ -53,22 +52,6 @@
 				</a>';
 				  }
 				  $pictureIndex = $pictureIndex + 1;
-			  }
-
-			  function getFiles($dir)
-			  {
-					  $ignored = array('.', '..', '.svn', '.htaccess');
-
-					  $files = array();
-					  foreach (scandir($dir) as $file) {
-						  if (in_array($file, $ignored)) continue;
-						  $files[$file] = filemtime($dir . '/' . $file);
-					  }
-
-					  arsort($files);
-					  $files = array_keys($files);
-
-					  return ($files) ? $files : false;
 			  }
 
 			  ?>

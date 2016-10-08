@@ -37,6 +37,7 @@
 			  $dir = 'images';
 			  //$files = scandir($dir, 0);
 			  $files = getFiles($dir);
+			  array_reverse($files);
 			  $pictureFolder = 'images/';
 			  $pictureFormat = 'jpg';
 			  $pictureIndex = 1;
